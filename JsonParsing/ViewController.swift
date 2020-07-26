@@ -8,6 +8,7 @@
 
 import UIKit
 import ProgressHUD
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -37,26 +38,42 @@ class ViewController: UIViewController {
         
         ProgressHUD.show()
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil {
-                print(error?.localizedDescription)
+        AF.request(request).responseData { (response) in
+            if response.error != nil {
+                print(response.error)
                 ProgressHUD.dismiss()
                 return
             }
             
-            self.loans = self.parseJsonData(data: data!)
-            
+            self.loans = self.parseJsonData(data: response.data!)
             OperationQueue.main.addOperation {
                 self.newestTableView.reloadData()
                 ProgressHUD.dismiss()
             }
             
             
-            // print(self.loans)
-            
-            // print(data)
-            
-        }.resume()
+        }
+        
+//        URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            if error != nil {
+//                print(error?.localizedDescription)
+//                ProgressHUD.dismiss()
+//                return
+//            }
+//
+//            self.loans = self.parseJsonData(data: data!)
+//
+//            OperationQueue.main.addOperation {
+//                self.newestTableView.reloadData()
+//                ProgressHUD.dismiss()
+//            }
+//
+//
+//            // print(self.loans)
+//
+//            // print(data)
+//
+//        }.resume()
         
     }
     
