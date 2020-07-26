@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		D320095124CD0F8400469BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D320095024CD0F8400469BFD /* Assets.xcassets */; };
 		D320095424CD0F8400469BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D320095224CD0F8400469BFD /* LaunchScreen.storyboard */; };
 		D320095C24CD136700469BFD /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320095B24CD136700469BFD /* Loan.swift */; };
+		D32DD42824CD1A7F00EE7D26 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32DD42724CD1A7F00EE7D26 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D320095324CD0F8400469BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D320095524CD0F8400469BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D320095B24CD136700469BFD /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		D32DD42724CD1A7F00EE7D26 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F655A555500017EEE51B0D4E /* Pods_JsonParsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonParsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,6 @@
 				5C1FB6121DAA7F2F8CEA4CBB /* Pods-JsonParsing.debug.xcconfig */,
 				585A41B09EA4A8227527B79B /* Pods-JsonParsing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				D320095224CD0F8400469BFD /* LaunchScreen.storyboard */,
 				D320095524CD0F8400469BFD /* Info.plist */,
 				D320095B24CD136700469BFD /* Loan.swift */,
+				D32DD42724CD1A7F00EE7D26 /* CustomTableViewCell.swift */,
 			);
 			path = JsonParsing;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D320094C24CD0F8100469BFD /* ViewController.swift in Sources */,
+				D32DD42824CD1A7F00EE7D26 /* CustomTableViewCell.swift in Sources */,
 				D320094824CD0F8100469BFD /* AppDelegate.swift in Sources */,
 				D320094A24CD0F8100469BFD /* SceneDelegate.swift in Sources */,
 				D320095C24CD136700469BFD /* Loan.swift in Sources */,

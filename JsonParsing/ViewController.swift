@@ -64,28 +64,32 @@ class ViewController: UIViewController {
     func parseJsonData(data: Data) -> [Loan] {
         var loans = [Loan]()
         
+        let decoder = JSONDecoder()
+        
         do {
                 
-            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+//            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+//
+//            // print(jsonResult)
+//
+//            let jsonLoans = jsonResult!["loans"] as! [AnyObject]
+//
+//            for obj in jsonLoans {
+//                var loan = Loan()
+//                loan.name = obj["name"] as! String
+//                loan.amount = obj["loan_amount"] as! Int
+//                loan.use = obj["use"] as! String
+//
+//                let location = obj["location"] as! [String:AnyObject]
+//                loan.country = location["country"] as! String
+//
+//                loans.append(loan)
+//            }
             
-            // print(jsonResult)
+            // print(jsonLoans)
             
-            let jsonLoans = jsonResult!["loans"] as! [AnyObject]
-            
-            for obj in jsonLoans {
-                var loan = Loan()
-                loan.name = obj["name"] as! String
-                loan.amount = obj["loan_amount"] as! Int
-                loan.use = obj["use"] as! String
-                
-                let location = obj["location"] as! [String:AnyObject]
-                loan.country = location["country"] as! String
-                
-                loans.append(loan)
-            }
-            
-            print(jsonLoans)
-            
+            let loanDataStore = try decoder.decode(LoanDataStore.self, from: data)
+            loans = loanDataStore.loans
             
         } catch {
             print(error)
@@ -103,10 +107,15 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = newestTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = newestTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         
-        cell.textLabel?.text = loans[indexPath.row].name
-        cell.detailTextLabel?.text = loans[indexPath.row].use
+        cell.nameLabel.text = loans[indexPath.row].name
+        cell.countryLabel.text = loans[indexPath.row].country
+        cell.useLabel.text = loans[indexPath.row].use
+        cell.amountLabel.text = "$\(loans[indexPath.row].amount)"
+        
+//        cell.textLabel?.text = loans[indexPath.row].name
+//        cell.detailTextLabel?.text = loans[indexPath.row].use
         
         return cell
     }
