@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9F5B428ABCF131001010880 /* Pods_JsonParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F655A555500017EEE51B0D4E /* Pods_JsonParsing.framework */; };
 		D320094824CD0F8100469BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320094724CD0F8100469BFD /* AppDelegate.swift */; };
 		D320094A24CD0F8100469BFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320094924CD0F8100469BFD /* SceneDelegate.swift */; };
 		D320094C24CD0F8100469BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320094B24CD0F8100469BFD /* ViewController.swift */; };
 		D320094F24CD0F8100469BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D320094D24CD0F8100469BFD /* Main.storyboard */; };
 		D320095124CD0F8400469BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D320095024CD0F8400469BFD /* Assets.xcassets */; };
 		D320095424CD0F8400469BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D320095224CD0F8400469BFD /* LaunchScreen.storyboard */; };
+		D320095C24CD136700469BFD /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320095B24CD136700469BFD /* Loan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		585A41B09EA4A8227527B79B /* Pods-JsonParsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonParsing.release.xcconfig"; path = "Target Support Files/Pods-JsonParsing/Pods-JsonParsing.release.xcconfig"; sourceTree = "<group>"; };
+		5C1FB6121DAA7F2F8CEA4CBB /* Pods-JsonParsing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonParsing.debug.xcconfig"; path = "Target Support Files/Pods-JsonParsing/Pods-JsonParsing.debug.xcconfig"; sourceTree = "<group>"; };
 		D320094424CD0F8100469BFD /* JsonParsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonParsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D320094724CD0F8100469BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D320094924CD0F8100469BFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		D320095024CD0F8400469BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D320095324CD0F8400469BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D320095524CD0F8400469BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D320095B24CD136700469BFD /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		F655A555500017EEE51B0D4E /* Pods_JsonParsing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonParsing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F5B428ABCF131001010880 /* Pods_JsonParsing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2283CAEE53DDE6F200333249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F655A555500017EEE51B0D4E /* Pods_JsonParsing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C9FEC29F659981F1AD27FAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FB6121DAA7F2F8CEA4CBB /* Pods-JsonParsing.debug.xcconfig */,
+				585A41B09EA4A8227527B79B /* Pods-JsonParsing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D320093B24CD0F8100469BFD = {
 			isa = PBXGroup;
 			children = (
 				D320094624CD0F8100469BFD /* JsonParsing */,
 				D320094524CD0F8100469BFD /* Products */,
+				4C9FEC29F659981F1AD27FAD /* Pods */,
+				2283CAEE53DDE6F200333249 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				D320095024CD0F8400469BFD /* Assets.xcassets */,
 				D320095224CD0F8400469BFD /* LaunchScreen.storyboard */,
 				D320095524CD0F8400469BFD /* Info.plist */,
+				D320095B24CD136700469BFD /* Loan.swift */,
 			);
 			path = JsonParsing;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D320095824CD0F8400469BFD /* Build configuration list for PBXNativeTarget "JsonParsing" */;
 			buildPhases = (
+				8152BA09173A7C18E8A0C6EE /* [CP] Check Pods Manifest.lock */,
 				D320094024CD0F8100469BFD /* Sources */,
 				D320094124CD0F8100469BFD /* Frameworks */,
 				D320094224CD0F8100469BFD /* Resources */,
+				09B3D8B48783EC34D2E6728A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +163,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09B3D8B48783EC34D2E6728A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JsonParsing/Pods-JsonParsing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JsonParsing/Pods-JsonParsing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JsonParsing/Pods-JsonParsing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8152BA09173A7C18E8A0C6EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JsonParsing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D320094024CD0F8100469BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +213,7 @@
 				D320094C24CD0F8100469BFD /* ViewController.swift in Sources */,
 				D320094824CD0F8100469BFD /* AppDelegate.swift in Sources */,
 				D320094A24CD0F8100469BFD /* SceneDelegate.swift in Sources */,
+				D320095C24CD136700469BFD /* Loan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +355,7 @@
 		};
 		D320095924CD0F8400469BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C1FB6121DAA7F2F8CEA4CBB /* Pods-JsonParsing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		D320095A24CD0F8400469BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 585A41B09EA4A8227527B79B /* Pods-JsonParsing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
