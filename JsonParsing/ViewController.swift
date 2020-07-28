@@ -50,8 +50,6 @@ class ViewController: UIViewController {
                 self.newestTableView.reloadData()
                 ProgressHUD.dismiss()
             }
-            
-            
         }
         
 //        URLSession.shared.dataTask(with: request) { (data, response, error) in
